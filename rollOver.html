@@ -1,0 +1,29 @@
+<html>
+<head>
+    <body bgcolor = "#CCCCFF">
+    <font face="Trebuchet" color="white">
+        
+    <h1> Carol Baskin </h1>
+     Click here <a href="index.html"> to return to home page</a>
+    
+<script language = "JavaScript">
+    
+    function rollIn(daImage)
+    {
+	daImage.src="images/roll2.jpg";
+    }
+    function rollOut(daImage)
+    {
+	daImage.src="images/roll1.jpg";
+    }
+
+
+
+</script>
+</head>
+<body>
+<center>
+<br/> <br/> <br/> <br/>   
+<img src="images/roll1.jpg" width = 600 onmouseout="rollOut(this)" onmouseover="rollIn(this)"/>
+</body>
+</html>
