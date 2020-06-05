@@ -1,0 +1,81 @@
+<html>
+<head>
+    
+<script language="JavaScript">
+var direction
+var timer;
+
+function start()
+{
+document.onkeydown=keyListener;
+}
+    
+    function keyListener()
+{
+    
+     var leftPos
+ if(window.event.keyCode > 0)// Tests if any key has been pressed
+ { leftPos = document.all.dude.style.left; 
+   leftPos = parseInt(leftPos);
+ }
+
+    
+
+  //testing if left arrow key is pressed
+  if(window.event.keyCode == 37)
+  {
+    document.getElementById('dude').innerHTML='<img src="images/dudeLF.gif" width="100">';
+    direction = 180;
+      leftPos = leftPos - 10;
+   document.all.dude.style.left = leftPos;
+  }
+    
+   
+  //testing if left arrow key is pressed
+  if(window.event.keyCode == 39)
+  {
+    document.getElementById('dude').innerHTML='<img src="images/dudeRT.gif" width="100">';
+    direction = 0;
+      leftPos = leftPos + 10;
+   document.all.dude.style.left = leftPos;
+      }
+
+}
+
+
+</script>
+</head>
+<body bgcolor="#CE0015" >
+
+<center>
+	<h1> My Dude </h1>
+	<input type="button" value="Click" onClick="start()"/>
+</center>
+
+    
+    
+<div id="bkgnd" style="position:absolute; left:250; top:100;">
+	<img src="images/background.jpg" width="800"/>
+</div>
+
+   
+    
+<div id="dude" style="position:absolute; left:250; top:400;">
+	<img src="images/dudeRT.gif" width="100"/>
+</div>
+    
+    
+ <div id="left" style="position:absolute; left:0; top:100;">
+	<img src="images/color.jpg" width="250"
+     height ="474"/>
+</div>
+    
+<div id="right" style="position:absolute; left:1050; top:100;">
+	<img src="images/color.jpg" width="316" height ="474"/>
+
+   
+    
+    
+
+</body>
+</html>
